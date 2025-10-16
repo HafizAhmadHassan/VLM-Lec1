@@ -277,3 +277,5 @@
 - RNN + Bahdanau + Simplifield self attention
 - self attention + casual + multihead
 - LLM--> ViT --> code from Scratch
+- we will count 175 Billion Params in GPT-3
+- in every single layer we will see in assignment
