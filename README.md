@@ -207,3 +207,73 @@
 - we do it later (1:08:00)
 
 ## FeedForward (1:10)
+- we are looking journey of token
+- 768 is dimension of cat 
+- projected up 768x 4 
+- and projected down to 768
+- 768 arsinel to represent meaning of cat
+- why we dont make down and make up (1:12:00)
+- because we lost information 
+
+## How it look like mathematical ops?
+- 1x768 
+- 768x4 
+- 1x3072
+- why 4 you try out different params and check which one fit it
+- bring back 1x768
+- what u use for vector transformation
+- matrix multiplication (1:15)
+- They all are learnable parameters
+- GPT has 175B params roughlt 2/3 parmas are feedforward
+- rest of params in multihead (1:18)
+- it distributed accross  
+
+## Each token Journet to Pass? (1:19)
+- pass to 12 transformer
+- input --> 768 and output --> 768
+- they are connected linearly 
+
+
+## Lets zoom out (1:20)
+- look image
+- dropout overfitting
+- layer normal
+- feedforward
+
+## Lets zoom out whole (1:21)
+- review it
+
+## Lets see Output Part
+- Final layer normalisation
+- (xi - mean /std ) * B + Gemma
+- cat expereinced lot of things GPT-2 pass through 12 and GPT-3 96 blocks
+- when u come output layer
+
+## What i want in output? (1:26)
+- i want next word prediction
+- i am going to one word 
+- 50000 words in my dictionary
+- 768 dimension 
+- i got 50257 words
+- 1x 768 x 768 x 50257
+- results =1x50257 --> pass to softmax
+- result vector i will see probablity distribution 1x 50257 --> these are called logits... their values could be negative floats--> which we pass through softmax --> result vector will be in range
+- For example there are multiple chances of choosing words with small probablity difference (1:30)
+- there is guarantee highest probablity should be picked 
+
+## Final output (1:33)
+- it shows training and prediction
+
+## Zoom out Output Step (1:34)
+- review it
+
+## Question?
+- The cat sat on the mat
+- cat will have information of all the tokens or just previous?
+- we will se in casual attention later on
+- We will see RNN attention idea
+
+## Next Lecture
+- RNN + Bahdanau + Simplifield self attention
+- self attention + casual + multihead
+- LLM--> ViT --> code from Scratch
